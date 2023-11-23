@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trucking Load Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/6359d93ddd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#calc-nav">Load Calculator</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <h1>Trucking Load Calculator</h1>
+      </header>
+      <!-- MAIN - Load Calculator -->
+      <main>
+      <div class="content-wrapper">
+        <span id="calc-nav"></span>
+        <section id="tl-calculator">
+          <h2>Load Calculator</h2>
+          <form #calc action="" autocomplete="off">
+            <div>
+              <label for="rate">RATE</label>
+              <input type="number" id="rate__load" placeholder="$" />
+            </div>
+            <div>
+              <label for="fuel">FUEL</label>
+              <input type="number" id="fuel__load" placeholder="$" />
+            </div>
+            <div>
+              <label for="tolls">TOLLS</label>
+              <input type="number" id="tolls__load" placeholder="$" />
+            </div>
+            <div>
+              <label for="profit">PROFIT</label>
+              <input type="number" id="profit__load" placeholder="$" />
+            </div>
+            <div><button class="submit__load" type="button">Calculate</button></div>
+            <div><button class="clear__load" type="reset">Clear</button></div>
+          </form>
+        </section>
+        <section class="why">
+          <p class="important">In trucking, time is loads of money!</p>
+          <p id="about">
+            At TLC, we know how important <strong>time</strong> is in trucking.
+            From the moment a trip is booked until it is delivered. That's why
+            we strive to make the best of it!
+          </p>
+          <p>
+            Errors can be made in the first moments: when booking a load. If a
+            bad load is booked, for various reasons, it can lead to income loss.
+            In order to avoid that, we developped a professional algorithm for
+            booking trips. It takes into consideration the rate, load weight and
+            tolls, CPM, fuel cost and deadhead miles.
+          </p>
+          <p>
+            In order to calculate the net profit for a load trip, all you have
+            to do is subtract the fuel cost and the tolls from the total
+            rate.
+          </p>
+        </section>
+      </div>
+      </main>
+      <!-- ASIDE - Fuel Calculator-->
+      <aside class="fuel">
+        <h3>Calculate fuel cost (F)</h3>
+        <p>
+          The Fuel Cost is calculated by dividing the distance (D) to the
+          mileage per gallon (MPG) multiplied by the price per gallon of fuel
+          (PPG).
+        </p>
+        <p class="fuel_equation">F = (D / MPG) x PPG</p>
+        <p class="fuel_ex">Example: (1000miles / 7MPG) x $4.95 = $707</p>
+
+        <h4 id="fuel_cc">Fuel Cost Calculator</h4>
+        <form action="#fuel_cc" autocomplete="off">
+          <div>
+            <label for="distance">DISTANCE</label>
+            <input type="text" id="distance" placeholder="Miles" />
+          </div>
+          <div>
+            <label for="mpg">MPG</label>
+            <input type="text" id="mpg" />
+          </div>
+          <div>
+            <label for="ppg">PPG</label>
+            <input type="text" id="ppg" placeholder="$" />
+          </div>
+          <div>
+            <label for="fuel-cost">FUEL COST</label>
+            <input type="text" id="fuel-cost" placeholder="$" />
+          </div>
+          <div><button type="submit">Calculate</button></div>
+          <div><button type="reset">Clear</button></div>
+        </form>
+      </aside>
+      <!-- <form action="https://formspree.io/f/mjvqzapp" method="POST">
+        <input type="text" placeholder="Name" name="name" />
+        <input type="text" placeholder="Email" name="email" />
+        <button type="submit">Submit</button>
+      </form> -->
+      <!-- ARTICLE - CPM -->
+      <article id="cpm-calculator">
+        <div class="content-wrapper">
+          <h3>Calculate Cost Per Mile (CPM)</h3>
+          <p>
+            The best way to calculate the CPM is by dividing the costs into two
+            categories: <strong>variable costs (VC)</strong> and
+            <strong>fixed costs(FC)</strong>. Variable costs vary based on the
+            number of miles you drive, while fixed costs stay the same. We
+            recommend to calculate your CPM at least quaterly, but it can be
+            done monthly or semiannually.
+          </p>
+          <div class="var_costs">
+            <h4>Variable Costs (VC)</h4>
+            <ul class="variable">
+              <li>Fuel</li>
+              <li>Maintenance and repairs</li>
+              <li>Driver pay</li>
+              <li>Dispatching/Factoring</li>
+              <li>Lodging</li>
+              <li>Miscellanous</li>
+            </ul>
+          </div>
+          <div class="fix_costs">
+            <h4 class="fixed">Fixed Costs (FC)</h4>
+            <ul>
+              <li>Truck & Trailer payment</li>
+              <li>Truck insurance</li>
+              <li>IRP</li>
+              <li>Subscriptions</li>
+              <li>Parking</li>
+            </ul>
+          </div>
+        <div class="example">
+          <p id="cpm">CPM = VC / miles + FC / miles</p>
+          <div class="cpm-example">
+            <p>Example - 3 month CPM: 
+              $38,500 / 31,400 miles
+              +
+              $15,333 / 31,400 miles
+              =
+              $1.22 + $0.48 = $1.70
+          </div>
+        </div>
+       <div class="conclusion">
+        <p>
+          Therefore, in order to make a profit, the rate needs to be higher
+          than $1.70 per mile.
+        </p>
+        </div>
+      </article>
+      <!-- FOOTER -->
+      <footer>
+        <div class="content-wrapper">
+          <div class="footer-contact">
+            <h4 id="contact">Contact</h4>
+              <p class="phone">
+                <i class="fa-solid fa-phone"></i> 555-555-5555 </p>
+              <p><a href="mailto:eugenfmorar@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i>eugenfmorar@gmail.com</a>
+              </p>
+            </div>
+          <div class="footer-social">
+            <h4>Social</h4>
+            <ul>
+              <li>
+                  <a href="https://www.linkedin.com/in/eugen-morar-006439226/"
+                  target="_blank">
+                  <i class="fa-brands fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/f_eugen" target="_blank"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+      </div>
+      </footer>
+    </div>
+  </body>
+</html>

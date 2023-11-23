@@ -1,0 +1,426 @@
+/* * {outline: 1px solid red;} */
+/* GENERAL Styles */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    max-width: 440px;
+    line-height: 1.5;
+}
+/* HEADER Styles */
+header {    
+    background: rgb(216, 214, 214);
+}
+
+header nav {
+    text-align: center;
+    padding: .7rem;
+    
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: .5rem;
+    margin: 1rem auto;
+    background: rgb(68, 67, 67);
+}
+
+nav ul li {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+h1 {
+    color: #000;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    /* font-family: 'Orbitron', sans-serif; */
+    text-align: center;
+    margin: 0;
+    padding: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: -0.1rem;
+    text-shadow: 1px 1px 1px rgb(67, 143, 67);;
+}
+
+/* MAIN Styles */
+main .content-wrapper {
+    background: rgb(216, 214, 214);
+}
+.why {
+    padding: 1rem 1.2rem .1rem 1.2rem;
+    text-align: center;
+}
+
+.why .important {
+    font-weight: 700;
+}
+
+h4 {
+    margin: 15px 0 5px 0;
+}
+
+#tl-calculator {
+    background: rgb(216, 214, 214);
+    color: green;
+    text-align: center;
+    padding: .5rem;
+}
+
+#tl-calculator h2 {
+    /* width: 90%; */
+    color: rgb(3, 99, 3);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: bold; 
+    /* margin-top: .6rem;  */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form div {
+    margin-top: 2rem;
+}
+label {
+    font-weight: 600;
+    
+}
+input {
+    display: block;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: .5rem .7rem;
+    outline: 0;
+    margin-top: .3rem;
+}
+input:focus {
+    border-color: #7db0fb;
+}
+#tl-calculator button {
+    background: rgb(3, 99, 3);
+    color: #fff;
+    border: 0;
+    padding: .5rem .7rem;
+    border-radius: 5px;
+    outline: 0;
+    text-transform: uppercase;
+}
+form .clear {
+    margin-bottom: 1rem;
+}
+#tl-calculator button:focus {
+    background: rgb(84, 116, 84);
+}
+article .content-wrapper {
+    padding: 1rem 1.2rem;
+}
+#cpm-calculator h3 {
+    font-size: 1.7rem;
+    color: lavender;
+    text-align: center;
+    background: rgb(115, 115, 116);
+    padding: 15px 20px;
+    text-transform: uppercase;
+    margin: .7rem;
+}
+#cpm-calculator h4 {
+    font-size: 1.7rem;
+    color:#fff;
+    text-align: center;
+    background: rgb(115, 115, 116);
+    margin: 0.8rem;
+    padding: 15px 20px;
+    text-transform: uppercase;
+}
+.example p, h5{
+    text-align: center;
+    line-height: 1.5;
+    padding: 10px;
+    margin: 1px;
+}
+#cpm-calculator h5 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.example #cpm {
+    color: rgb(69, 27, 97);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* ASIDE Styles  */
+.fuel h3, .fuel h4 {
+    font-size: 1.7rem;
+    color:lavender;
+    text-align: center;
+    background: rgb(115, 115, 116);
+    margin: 0.8rem;
+    padding: 15px 20px;
+    text-transform: uppercase;
+}
+.fuel {
+    background: rgb(216, 214, 214);
+    padding: 10px 15px;
+    text-align: center;
+    line-height: 1.5;
+}
+.fuel_equation {
+    color: rgb(69, 27, 97);
+    font-weight: 800;
+}
+.fuel button {
+    background: rgb(68, 67, 67);;
+    color: #fff;
+    border: 0;
+    padding: .5rem .7rem;
+    border-radius: 5px;
+    outline: 0;
+    text-transform: uppercase; 
+}
+.fuel button:focus {
+    background: rgb(110, 107, 107);
+}
+
+/*  FOOTER Styles  */
+footer .content-wrapper {
+    background: rgb(68, 67, 67);
+    padding: 1rem 1.2rem;
+    text-align: center;
+    margin: 20px 0;
+}
+footer p {
+    color: #fff;
+
+}
+footer h4 {
+    font-size: 1.8rem;
+    color:#fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.footer-social h4 {
+    margin-top: 4rem;
+}
+.footer-social ul {
+    list-style: none;
+}
+.footer-social ul li {
+    display: inline;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0.2rem;
+}
+footer a:hover, i:hover {
+    cursor: pointer;
+    color: rgb(75, 7, 75);
+    /* font-size: 1.7rem; */
+    font-weight: 700;
+    
+}
+.footer-contact i {
+    padding-right: 1rem;
+}
+.footer-social i {
+    padding-right: 3rem;
+    padding-top: 1rem;
+}
+
+
+/* MEDIA QUERY Styles for Tablet */
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 960px;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav ul {
+        width: 95%;
+        flex-direction: row;
+        justify-content: center;
+        padding: .7rem;
+        justify-content: space-around;
+    }
+    nav ul li {
+        margin-top: 25px;
+    }
+    .container {
+        display: grid;
+        grid-template: 16rem auto auto 16rem / 35fr 65fr;
+        grid-template-areas: 
+            "header  header"
+            "aside   main"
+            "article article"
+            "footer  footer";
+        height: 100vh;
+        gap: 10px;
+    }
+
+    /* HEADER STYLES*/
+    header {
+        height: auto;
+        grid-column: 1 / 3;
+    }
+    header h1 {
+        font-size: 3.2rem;
+        margin-bottom: 50px;
+    }
+
+    /* MAIN STYLES */
+    main {
+        background: rgb(216, 214, 214);
+    }
+    .why p {
+        padding: .6rem 1.3rem;
+        text-align: left;
+        line-height: 1.5;
+    }
+    #tl-calculator h2 {
+        font-size: 2.8rem;
+    }
+    #tl-calculator input {
+        margin-left: -15%;
+        width: 120%;
+    }
+
+    /* ASIDE Styles */
+    aside {
+        grid-area: aside;
+    }
+    .fuel form {
+        display: flex;
+        align-items: center;
+    }
+    .fuel input {
+        margin-left: 15%;
+        margin-right: 15%;
+        width: 70%;
+    }
+   
+    /* ARTICLE Styles */
+    article {
+        grid-area: article;
+    }
+    article .content-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        padding: 1rem 1.2rem;
+        background: rgb(216, 214, 214);
+    }
+    article h3 {
+        width: 95%;
+    }
+    #cpm-calculator p {
+        padding: 1rem 1.2rem;
+    }
+
+    /* FOOTER Styles */
+    footer {
+        grid-area: footer;
+        height: 16rem;
+    }
+    footer .content-wrapper {
+        padding: 1rem 1.2rem;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row nowrap;
+        text-align: center;
+        
+    }
+    footer h4 {
+        margin: 20px;
+    }
+    .footer-contact, .footer-social {
+        text-align: center;
+        width: 90%;
+        margin: 0;
+    }
+    .footer-social h4 {
+        margin-top: 1.7rem;
+    }
+    .footer-social ul {
+        list-style: none;
+}
+    .footer-social ul li {
+        display: inline;
+        font-size: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+/* MEDIA QUERY Styles for Desktop */
+@media screen and (min-width: 1240px) {
+    body {
+        max-width: 1400px;
+    }
+/* Header Styles */
+header h1 {
+    font-size: 4.2rem;
+}
+#tl-calculator h2 {
+    font-size: 3.4rem;
+}
+
+/* ARTICLE Styles */
+.article .content-wrapper {
+    flex-direction: row nowrap;
+}
+.var_costs,
+.fix_costs,
+.example {
+    width: 30%;
+}
+.var_costs {
+    order: 1;
+    border: 3px solid grey;
+}
+.example {
+    order: 2;
+    align-items: flex-end;
+    border: 3px solid grey;
+    padding-top: 2.5rem;
+}
+.fix_costs {
+    order: 3;
+    border: 3px solid grey;
+}
+.conclusion {
+    order: 4;
+}
+.example p {
+    margin: 0 5rem;
+    text-align: center;
+}
+footer .content-wrapper {
+    color: #fff;
+    margin-top: 0;
+}
+footer h4 {
+    background: none;
+}
+}

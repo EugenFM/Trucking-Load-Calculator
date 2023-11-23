@@ -1,0 +1,35 @@
+ <form id="fuelForm">
+          <label for="distance">Enter Distance (miles):</label>
+          <input id="distance" required /><br />
+
+          <label for="mpg">Enter Miles Per Gallon (MPG):</label>
+          <input id="mpg" required /><br />
+
+          <label for="ppg">Enter Price Per Gallon (PPG):</label>
+          <input id="ppg" required /><br />
+
+          <input type="submit" value="Calculate Fuel Cost" />
+          <button type="button" onclick="resetForm()">Clear Inputs</button>
+        </form>
+
+        <div id="result"></div>
+
+        <script>
+          document.getElementById("fuelForm").onsubmit = function (event) {
+            event.preventDefault();
+            var distance = parseFloat(
+              document.getElementById("distance").value
+            );
+            var mpg = parseFloat(document.getElementById("mpg").value);
+            var ppg = parseFloat(document.getElementById("ppg").value);
+
+            var fuelCost = (distance / mpg) * ppg;
+            document.getElementById("result").textContent =
+              "Fuel Cost: $" + fuelCost.toFixed(2);
+          };
+
+          function resetForm() {
+            document.getElementById("fuelForm").reset();
+            document.getElementById("result").textContent = "";
+          }
+        </script>
