@@ -52,7 +52,8 @@ h1 {
     margin: 0;
     padding: 2.5rem;
     text-transform: uppercase;
-    letter-spacing: -0.1rem;
+    letter-spacing: .1rem;
+
     text-shadow: 1px 1px 1px rgb(67, 143, 67);;
 }
 
@@ -102,8 +103,8 @@ form div {
 }
 label {
     font-weight: 600;
-    
 }
+
 input {
     display: block;
     border: 1px solid #333;
@@ -115,6 +116,20 @@ input {
 input:focus {
     border-color: #7db0fb;
 }
+.results__load {
+    background-color: rgb(219, 244, 213);
+    color:rgb(3, 99, 3);
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase ;
+    display: block;
+    border: 1px solid rgb(5, 59, 16);
+    border-radius: 5px;
+    padding: 0 .7rem;
+    outline: 0;
+    margin-top: 2rem;
+}
+
 #tl-calculator button {
     background: rgb(3, 99, 3);
     color: #fff;
@@ -133,6 +148,7 @@ form .clear {
 article .content-wrapper {
     padding: 1rem 1.2rem;
 }
+
 #cpm-calculator h3 {
     font-size: 1.7rem;
     color: lavender;
@@ -187,6 +203,19 @@ article .content-wrapper {
     color: rgb(69, 27, 97);
     font-weight: 800;
 }
+.results__fuel {
+    background-color: rgb(219, 244, 213);
+    color:rgb(3, 99, 3);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase ;
+    display: block;
+    border: 1px solid rgb(5, 59, 16);
+    border-radius: 5px;
+    padding: .3rem .7rem;
+    outline: 0;
+    margin-top: 2rem;
+}
 .fuel button {
     background: rgb(68, 67, 67);;
     color: #fff;
@@ -201,15 +230,28 @@ article .content-wrapper {
 }
 
 /*  FOOTER Styles  */
+footer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
 footer .content-wrapper {
     background: rgb(68, 67, 67);
     padding: 1rem 1.2rem;
     text-align: center;
     margin: 20px 0;
 }
+.footer-contact {
+    width: 100%;
+    line-height: normal;
+}
+
+.footer-social {
+    width: 100%;
+    padding-top: .3rem;
+}
 footer p {
     color: #fff;
-
 }
 footer h4 {
     font-size: 1.8rem;
@@ -217,14 +259,22 @@ footer h4 {
     text-align: center;
     text-transform: uppercase;
 }
+.footer-social i {
+    padding: 0 1rem;
+}
 .footer-social h4 {
     margin-top: 4rem;
 }
 .footer-social ul {
     list-style: none;
+    padding-left: 1.2rem;
 }
 .footer-social ul li {
-    display: inline;
+    /* display: inline; */
+    display: flex;
+}
+.footer-contact i {
+    padding-right: 1rem;
 }
 footer a {
     color: #fff;
@@ -233,17 +283,10 @@ footer a {
 }
 footer a:hover, i:hover {
     cursor: pointer;
-    color: rgb(75, 7, 75);
-    /* font-size: 1.7rem; */
+    color: rgb(69, 27, 97);
+    animation: 0.25s ease-in;
+    /* animation-delay: 0.5s; */
     font-weight: 700;
-    
-}
-.footer-contact i {
-    padding-right: 1rem;
-}
-.footer-social i {
-    padding-right: 3rem;
-    padding-top: 1rem;
 }
 
 
@@ -269,7 +312,7 @@ footer a:hover, i:hover {
     }
     .container {
         display: grid;
-        grid-template: 16rem auto auto 16rem / 35fr 65fr;
+        grid-template: 16rem auto auto auto / 35fr 65fr;
         grid-template-areas: 
             "header  header"
             "aside   main"
@@ -314,11 +357,11 @@ footer a:hover, i:hover {
         display: flex;
         align-items: center;
     }
-    .fuel input {
-        margin-left: 15%;
-        margin-right: 15%;
-        width: 70%;
-    }
+    /* .fuel input {
+        /* margin-left: 15%; */
+        /* margin-right: 15%; */
+        /* width: 70%; */
+    } 
    
     /* ARTICLE Styles */
     article {
@@ -341,23 +384,19 @@ footer a:hover, i:hover {
     /* FOOTER Styles */
     footer {
         grid-area: footer;
-        height: 16rem;
+        /* height: 16rem; */
     }
     footer .content-wrapper {
         padding: 1rem 1.2rem;
         margin: 0;
-        display: flex;
-        justify-content: space-around;
-        flex-flow: row nowrap;
         text-align: center;
-        
     }
     footer h4 {
         margin: 20px;
     }
     .footer-contact, .footer-social {
         text-align: center;
-        width: 90%;
+        width: 100%;
         margin: 0;
     }
     .footer-social h4 {
@@ -369,9 +408,9 @@ footer a:hover, i:hover {
     .footer-social ul li {
         display: inline;
         font-size: 2rem;
-        margin-right: 2rem;
+        margin: 3.5rem;
     }
-}
+
 
 /* MEDIA QUERY Styles for Desktop */
 @media screen and (min-width: 1240px) {
@@ -390,6 +429,14 @@ header h1 {
 .article .content-wrapper {
     flex-direction: row nowrap;
 }
+.var_costs:hover, 
+.fix_costs:hover,
+.example:hover {
+    animation: 0.25s ease-in;
+    animation-delay: 0.5s;
+    cursor: pointer; 
+}
+
 .var_costs,
 .fix_costs,
 .example {
@@ -417,6 +464,9 @@ header h1 {
     text-align: center;
 }
 footer .content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap; 
     color: #fff;
     margin-top: 0;
 }

@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <script
       src="https://kit.fontawesome.com/6359d93ddd.js"
       crossorigin="anonymous"
@@ -41,25 +45,25 @@
           <h2>Load Calculator</h2>
           <form #calc action="" autocomplete="off">
             <div>
-              <label for="rate">RATE</label>
+              <label for="rate__load">RATE</label>
               <input type="number" id="rate__load" placeholder="$" />
             </div>
             <div>
-              <label for="fuel">FUEL</label>
+              <label for="fuel__load">FUEL</label>
               <input type="number" id="fuel__load" placeholder="$" />
             </div>
             <div>
-              <label for="tolls">TOLLS</label>
+              <label for="tolls__load">TOLLS</label>
               <input type="number" id="tolls__load" placeholder="$" />
             </div>
-            <div>
-              <label for="profit">PROFIT</label>
-              <input type="number" id="profit__load" placeholder="$" />
-            </div>
+           
+            <div class='results__load'>Profit: $$$</div>
+
             <div><button class="submit__load" type="button">Calculate</button></div>
             <div><button class="clear__load" type="reset">Clear</button></div>
           </form>
         </section>
+
         <section class="why">
           <p class="important">In trucking, time is loads of money!</p>
           <p id="about">
@@ -94,33 +98,28 @@
         <p class="fuel_ex">Example: (1000miles / 7MPG) x $4.95 = $707</p>
 
         <h4 id="fuel_cc">Fuel Cost Calculator</h4>
-        <form action="#fuel_cc" autocomplete="off">
+        <form #fuel_cc action="" autocomplete="off">
           <div>
-            <label for="distance">DISTANCE</label>
-            <input type="text" id="distance" placeholder="Miles" />
+            <label for="distance__fuel">DISTANCE</label>
+            <input type="number" id="distance__fuel" placeholder="Miles" />
           </div>
           <div>
-            <label for="mpg">MPG</label>
-            <input type="text" id="mpg" />
+            <label for="mpg__fuel">MPG</label>
+            <input type="number" id="mpg__fuel" placeholder="ex. 4.9"/>
           </div>
           <div>
-            <label for="ppg">PPG</label>
-            <input type="text" id="ppg" placeholder="$" />
+            <label for="ppg__fuel">PPG</label>
+            <input type="number" id="ppg__fuel" placeholder="$" />
           </div>
-          <div>
-            <label for="fuel-cost">FUEL COST</label>
-            <input type="text" id="fuel-cost" placeholder="$" />
+          <div id="fuel__cost" class='results__fuel'>Fuel Cost: $$$
+          
           </div>
-          <div><button type="submit">Calculate</button></div>
-          <div><button type="reset">Clear</button></div>
+
+          <div><button class="submit__fuel" type="button">Calculate</button></div>
+          <div><button class="reset__fuel" type="reset">Clear</button></div>
         </form>
       </aside>
-      <!-- <form action="https://formspree.io/f/mjvqzapp" method="POST">
-        <input type="text" placeholder="Name" name="name" />
-        <input type="text" placeholder="Email" name="email" />
-        <button type="submit">Submit</button>
-      </form> -->
-      <!-- ARTICLE - CPM -->
+    
       <article id="cpm-calculator">
         <div class="content-wrapper">
           <h3>Calculate Cost Per Mile (CPM)</h3>
@@ -132,7 +131,7 @@
             recommend to calculate your CPM at least quaterly, but it can be
             done monthly or semiannually.
           </p>
-          <div class="var_costs">
+          <div class="var_costs animate__animated animate__pulse">
             <h4>Variable Costs (VC)</h4>
             <ul class="variable">
               <li>Fuel</li>
@@ -143,7 +142,7 @@
               <li>Miscellanous</li>
             </ul>
           </div>
-          <div class="fix_costs">
+          <div class="fix_costs animate__animated animate__pulse">
             <h4 class="fixed">Fixed Costs (FC)</h4>
             <ul>
               <li>Truck & Trailer payment</li>
@@ -153,7 +152,7 @@
               <li>Parking</li>
             </ul>
           </div>
-        <div class="example">
+        <div class="example animate__animated animate__pulse">
           <p id="cpm">CPM = VC / miles + FC / miles</p>
           <div class="cpm-example">
             <p>Example - 3 month CPM: 
@@ -180,7 +179,7 @@
                 <i class="fa-solid fa-phone"></i> 555-555-5555 </p>
               <p><a href="mailto:eugenfmorar@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i>eugenfmorar@gmail.com</a>
               </p>
-            </div>
+          </div>
           <div class="footer-social">
             <h4>Social</h4>
             <ul>
@@ -201,7 +200,7 @@
               </li>
             </ul>
           </div>
-      </div>
+        </div>
       </footer>
     </div>
   </body>

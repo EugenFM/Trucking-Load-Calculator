@@ -1,0 +1,16 @@
+.container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.div1 {
+  background-color: red;
+  height: 300px;
+  width: 200px;
+}
+.div2 {
+  background-color: blue;
+  height: 300px;
+  width: 200px;
+}
